@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using OpenCvSharp;
 namespace OpenCV_CH1
 {
     public partial class Form1 : Form
@@ -15,6 +15,11 @@ namespace OpenCV_CH1
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Mat src = Cv2.ImRead(@"C:\Users\user\Pictures\IMG_0001.jpg");
         }
     }
 }
