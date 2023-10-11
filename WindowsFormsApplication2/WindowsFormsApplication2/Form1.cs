@@ -96,6 +96,30 @@ namespace OpenCV_basic
             Console.WriteLine(scalar3.ToString());
 
 
+            OpenCvSharp.Size size = new OpenCvSharp.Size(640, 480);
+
+            Mat img = new Mat(size, MatType.CV_8UC3);
+            Mat img2 = new Mat(img.Size(), MatType.CV_8UC3);
+
+            Console.WriteLine($"{size.Width}, {size.Height}");
+            Console.WriteLine(img.Size());
+            Console.WriteLine($"{img.Size().Width}, {img.Size().Height}");
+            Console.WriteLine($"{img.Width}, {img.Height}");
+
+            Range range = new Range(0, 100);
+            Console.WriteLine($"{range.Start}, {range.End}");
+
+            Rect rect1 = new Rect(new OpenCvSharp.Point(0, 0), new OpenCvSharp.Size(640, 480));
+            Rect rect2 = new Rect(100, 100, 640, 480);
+
+            Console.WriteLine(rect1);
+            Console.WriteLine(rect2);
+
+            RotatedRect rotateRect = new RotatedRect(new Point2f(100f, 100f), new Size2f(100, 100), 45f);
+
+            Console.WriteLine(rotateRect.BoundingRect()); // 회전된 직사각형을 포함하는 직사각형
+            Console.WriteLine(rotateRect.Points().Length); // rotatedPoint.Points() : 회전된 직사각형의 4개의 코너
+            Console.WriteLine(rotateRect.Points()[0]); //  
         }
     }
 }
