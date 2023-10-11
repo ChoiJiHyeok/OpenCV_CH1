@@ -91,9 +91,10 @@ namespace OpenCV_basic
             Scalar scalar2 = Scalar.Yellow;  // Yellow 값을 할당
             Scalar scalar3 = Scalar.All(99); // 모든 값을 할당
 
-            MessageBox.Show(scalar1.ToString());
-            MessageBox.Show(scalar2.ToString());
-            MessageBox.Show(scalar3.ToString());
+            Console.WriteLine(scalar1.ToString());
+            Console.WriteLine(scalar2.ToString());
+            Console.WriteLine(scalar3.ToString());
+
 
         }
     }
